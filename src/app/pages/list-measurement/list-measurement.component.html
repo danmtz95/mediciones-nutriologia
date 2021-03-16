@@ -1,0 +1,60 @@
+
+<div class="card">
+    <div class="card-header">
+        <div class="p-0">
+			<div class="d-flex justify-content-between flex-wrap">
+                <div class="mb-3">
+          <h4 class="card-title">MEDIDAS </h4>
+          <h6 *ngIf="paciente"> Paciente: {{this.paciente.nombre}} {{this.paciente.apellido}}</h6>
+				</div>
+				<div class="mb-3">
+					<!-- <button type="button" class="btn btn-primary btn-sm" [routerLink]="['/agregar-medida']">
+						<i class="fa fa-plus mr-2"></i>medida
+					</button> -->
+				</div>
+            </div>
+        </div>  
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class=" text-primary">
+            <tr>
+                <th>FECHA</th>
+                <th>PESO</th>
+                <th>CINTURA</th>
+                <th>ABDOMEN</th>
+                <th>CADERA</th>
+                <th>ANTEBRAZO</th>
+                <th>NOTA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let medida of mediciones">
+                <td>
+                    <div>{{ medida.fecha }}</div>
+                </td>
+                <td>
+                    <div>{{ medida.peso }}</div>
+                </td>
+                <td>
+                    <div>{{ medida.cintura }}</div>
+                </td>
+                <td>
+                    <div>{{ medida.abdomen }}</div>
+                </td>
+                <td>
+                    <div>{{ medida.cadera }}</div>
+                </td>
+                <td>
+                    <div>{{ medida.antebrazo }}</div>
+                </td>
+                <td>
+                    <div>{{ medida.nota }}</div>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+        <div class="p-0">
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="mb-3">
+                    <h5 class="card-title"> Agregar Paciente</h5>
+                </div>
+                <div class="mb-3">
+             <!-- aqui puede ir un boton -->
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+          <form ngNativeValidate id="pacienteForm" (submit)="agregar()">
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Nombre</label>
+                  <input required type="text" class="form-control"  placeholder="Nombre" name="nombre" [(ngModel)]="paciente.nombre">
+                </div>
+              </div>
+              <div class="col-md-6 px-1">
+                <div class="form-group">
+                  <label>Apellido</label>
+                  <input required type="text" class="form-control" placeholder="Apellido" name="apellido" [(ngModel)]="paciente.apellido">
+                </div>
+              </div>
+             
+            </div>
+            <div class="row">
+                <div class="col-md-6 pr-1">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Correo Electronico</label>
+                      <input required  type="email" class="form-control" placeholder="Correo Electronico" name="correo_electronico" [(ngModel)]="paciente.correo_electronico">
+                    </div>
+                  </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label>Telefono</label>
+                  <input required type="text" class="form-control" placeholder="XXX-XXX-XX-XX" name="telefono" [(ngModel)]="paciente.telefono">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="update ml-auto mr-auto">
+                <button type="submit"  form="pacienteForm" class="btn btn-primary btn-round">Guardar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,80 @@
+<div class="card">
+    <div class="card-header">
+        <div class="p-0">
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="mb-3">
+                    <h5 class="card-title"> Agregar Medida</h5>
+                </div>
+                <div class="mb-3">
+                    <!-- aqui puede ir un boton -->
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <form ngNativeValidate id="medidaForm" (submit)="agregar()">
+                <div class="row">
+                    <div class="col-md-4 pr-1">
+                        <div class="form-group">
+                            <label>Peso</label>
+                            <input required type="text" class="form-control" placeholder="kg" name="peso"
+                                [(ngModel)]="medida.peso">
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-1">
+                        <div class="form-group">
+                            <label>Cintura</label>
+                            <input required type="text" class="form-control" placeholder="cm" name="cintura"
+                                [(ngModel)]="medida.cintura">
+                        </div>
+                    </div>
+                    <div class="col-md-4 pr-1">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Abdomen</label>
+                            <input required type="text" class="form-control" placeholder="cm"
+                                name="abdomen" [(ngModel)]="medida.abdomen">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                            <label>Cadera</label>
+                            <input required type="text" class="form-control" placeholder="cm" name="cadera"
+                                [(ngModel)]="medida.cadera">
+                        </div>
+                    </div>
+                    <div class="col-md-4 pr-1">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Antebrazo</label>
+                            <input required type="text" class="form-control" placeholder="cm"
+                                name="antebrazo" [(ngModel)]="medida.antebrazo">
+                        </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                            <label>Fecha</label>
+                            <input required type="date" class="form-control" name="fecha"
+                                [(ngModel)]="medida.fecha">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 pl-1">
+                        <div class="form-group">
+                            <label>Nota</label>
+                            <input required type="text" class="form-control" placeholder="Nota" name="nota"
+                                [(ngModel)]="medida.nota">
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="row">
+                    <div class="update ml-auto mr-auto">
+                        <button type="submit" form="medidaForm" class="btn btn-primary btn-round">Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
